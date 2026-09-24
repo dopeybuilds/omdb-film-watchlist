@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/ticket-header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 175px;
+    position: relative;
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+}
+
+.header-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    bottom: -15px;
+}
+
+.search {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #2E2E2F;
+    padding: 0.5rem;
+    width: 275px;
+}
+
+.search-button {
+    border: 1px solid white;
+    width: 100px;
+    outline: none;
+    color: white;
+    background-color: #2E2E2F;
+}
