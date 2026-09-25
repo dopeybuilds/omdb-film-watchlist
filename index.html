@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -18,12 +19,30 @@
         <a href="https://example.com">My Watchlist</a>
     </div>
     <div class="search-container">
-        <form>
+        <form class="search-form">
+            <img src="./images/search.svg" alt="search icon" class="search-icon">
             <input type="search" name="search" id="search" class="search" placeholder="Search for a movie!">
         </form>
         <button form="search" id="search-button" class="search-button">Search</button>
     </div>
 </header>
+<main id="results" class="results">
+    <div class="movie-card">
+        <img src="" alt="" class="movie-poster">
+        <div class="movie-info">
+            <img src="" alt="Movie Poster" class="movie-title">
+            <h3 class="movie-title">Grave of the fireflies <span>⭐ 5.0 </span></h3>
+            <p class="meta-data">116 min</p>
+            <img src="./images/add.svg" alt="add icon" class="add-icon">
+            <button>Watchlist</button>
+            <p>plot</p>
+        </div>
+    </div>
+<!--    <div class="empty-placeholder">-->
+<!--        <img src="./images/film.svg" alt="film icon" class="film-icon">-->
+<!--        <p>Start Exploring</p>-->
+<!--    </div>-->
+</main>
 <script src="index.js"></script>
 </body>
 </html>
