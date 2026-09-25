@@ -87,3 +87,23 @@ main {
     width: 4rem;
     height: 4rem;
 }
+
+.movie-card {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.poster {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.movie-heading, .movie-meta-data {
+    margin: 0;
+}
