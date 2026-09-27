@@ -1,8 +1,25 @@
-// API key= http://www.omdbapi.com/?apikey=[784ea01]&s=grave+of+the+fireflies
+const apiKey = "784ea01"
 
-async function searchMovie() {
-    const res = await fetch("https://www.omdbapi.com/?apikey=784ea01&s=grave+of+the+fireflies")
+
+document.getElementById("search-form").addEventListener("submit", event => {
+    event.preventDefault()
+    const search = event.target.search.value
+    const searchText = search.trim()
+    if (searchText === "") {}
+})
+
+
+
+
+
+
+
+async function searchMovie(searchText) {
+    const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURICpomponent(searchText)}`)
     const data = await res.json()
+    if (data.res === "False") {
+        console.log("error")
+    }
+    
     console.log(data)
 }
-searchMovie()

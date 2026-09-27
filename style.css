@@ -12,7 +12,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/ticket-header.jpg");
     background-size: cover;
     background-position: center;
-    height: 175px;
+    height: 11rem;
     position: relative;
 }
 
@@ -35,8 +35,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    bottom: -15px;
-    height: 40px;
+    bottom: -1rem;
+    height: 2.5rem;
 }
 
 .search {
@@ -44,8 +44,9 @@ body {
     border: none;
     outline: none;
     background-color: #2E2E2F;
+    color: white;
     padding: 0.5rem;
-    width: 275px;
+    width: 17rem;
 }
 
 .search-button {
@@ -53,10 +54,10 @@ body {
     border-top: none;
     border-right: none;
     border-bottom: none;
-    width: 100px;
+    width: 6.25rem;
     color: white;
     background-color: #2E2E2F;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 .5rem .5rem 0;
 }
 
 .search-form {
@@ -64,13 +65,14 @@ body {
     align-items: center;
     background-color: #2E2E2F;
     padding-left: 0.5rem;
-    border-radius: 8px 0 0 8px;
+    border-radius: 0.5rem 0 0 0.5rem;
 }
 
 main {
     padding-top: 3rem;
     margin: 0 auto;
     padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .empty-placeholder {
@@ -91,11 +93,15 @@ main {
 .movie-card {
     display: flex;
     gap: 1.25rem;
+    border-bottom: 1px solid #817c7c;
+    padding-bottom: 2rem;
 }
 
 .poster {
-    width: 100px;
+    width: 9.35rem;
     flex-shrink: 0;
+    height: 12.5rem;
+    align-self: center;
 }
 
 .movie-info {
@@ -106,4 +112,35 @@ main {
 
 .movie-heading, .movie-meta-data {
     margin: 0;
+}
+
+.movie-rating {
+    font-size: .85rem;
+    vertical-align: middle;
+}
+
+.movie-title {
+   font-size: 1.5rem;
+    margin-bottom: .5rem
+}
+
+.movie-meta-data {
+    display: flex;
+    font-size: .85rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.add-watchlist {
+    font-size: .75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    background: none;
+    color: white;
+    border: none;
+}
+
+.add-watchlist:hover {
+    cursor: pointer;
 }

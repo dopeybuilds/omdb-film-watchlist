@@ -16,14 +16,14 @@
 <header class="header">
     <div class="header-text">
         <h1>Find your film</h1>
-        <a href="https://example.com">My Watchlist</a>
+        <a href="watchlist.html">My Watchlist</a>
     </div>
     <div class="search-container">
-        <form class="search-form">
+        <form id="search-form"  class="search-form">
             <img src="./images/search.svg" alt="search icon" class="search-icon">
             <input type="search" name="search" id="search" class="search" placeholder="Search for a movie!">
+            <button id="search-button" class="search-button">Search</button>
         </form>
-        <button form="search" id="search-button" class="search-button">Search</button>
     </div>
 </header>
 <main id="results" class="results">
@@ -32,8 +32,7 @@
              src="https://m.media-amazon.com/images/M/MV5BNTY5MmE2OGMtN2IxNC00MDY4LTkwMGEtZDUzOTYyNWE0ZTNjXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg">
         <div class="movie-info">
             <div class="movie-heading">
-                <h3 class="movie-title">Grave of the Fireflies</h3>
-                <span class="movie-rating">⭐ 5.0</span>
+                <h3 class="movie-title">Grave of the Fireflies <span class="movie-rating">⭐ 5.0</span></h3>
             </div>
             <div class="movie-meta-data">
                 <span class="runtime">89 min</span>
