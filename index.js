@@ -15,7 +15,8 @@ async function searchMovie(searchText) {
     const data = await res.json()
 
     if (data.Response === "False") {
-        console.log("This is an error")
+        results.innerHTML = 
+            `<p class="empty-placeholder">"We can't find that movie!"</p>`
         return
     }
 
