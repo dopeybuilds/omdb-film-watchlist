@@ -1,5 +1,23 @@
 const apiKey = "784ea01"
 const results = document.getElementById("results")
+let currentMovies = []
+
+
+results.addEventListener("click", (e) => {
+    const button = e.target.closest(".add-watchlist")
+    if (button == null) {
+        
+    } else {
+    const id = button.dataset.id
+        const movie = currentMovies.find((movie) => movie.imdbID === id)
+        let watchlist = getWatchlist()
+        if (watchlist.some((saved) => movie.imdbID === saved)) {} 
+        else {
+            getWatchlist().push(movie)
+            saveWatchlist(watchlist)
+        }
+    }
+})
 
 document.getElementById("search-form").addEventListener("submit", async event => {
     event.preventDefault()
@@ -23,14 +41,14 @@ async function searchMovie(searchText) {
 
     const detailPromises = data.Search.map(movie => getMovieDetails(movie.imdbID))
     const movies = await Promise.all(detailPromises)
+    currentMovies = movies
     renderMovies(movies)
     console.log(movies)
 }
 
 async function getMovieDetails(imdbID) {
     const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`)
-    const data = await res.json()
-    return data
+    return await res.json()
 }
 
 function renderMovies(movies) {
