@@ -11,9 +11,9 @@ results.addEventListener("click", (e) => {
     const id = button.dataset.id
         const movie = currentMovies.find((movie) => movie.imdbID === id)
         let watchlist = getWatchlist()
-        if (watchlist.some((saved) => movie.imdbID === saved)) {} 
+        if (watchlist.some((saved) => movie.imdbID === saved.imdbID)) {} 
         else {
-            getWatchlist().push(movie)
+            watchlist.push(movie)
             saveWatchlist(watchlist)
         }
     }
@@ -34,7 +34,7 @@ async function searchMovie(searchText) {
 
     if (data.Response === "False") {
         results.innerHTML = 
-            `<p class="empty-placeholder">"We can't find that movie!"</p>`
+            `<p class="empty-placeholder">We can't find that movie!</p>`
         return
     }
 
