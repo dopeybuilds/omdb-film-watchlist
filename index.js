@@ -2,7 +2,7 @@ const apiKey = "784ea01"
 const results = document.getElementById("results")
 let currentMovies = []
 
-
+renderPlaceholder()
 results.addEventListener("click", (e) => {
     const button = e.target.closest(".add-watchlist")
     if (button == null) {
@@ -72,4 +72,12 @@ function renderMovies(movies) {
             </div>
         </div>
     `).join("")
+}
+
+function renderPlaceholder() {
+    results.innerHTML =
+        `<div class="empty-placeholder">
+            <img src="./images/film.svg" alt="film icon" class="film-icon">
+            <p>Start Exploring</p>
+        </div>`
 }

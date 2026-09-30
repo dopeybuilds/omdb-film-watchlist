@@ -131,7 +131,7 @@ main {
     gap: 2rem;
 }
 
-.add-watchlist {
+.add-watchlist, .remove-watchlist {
     font-size: .75rem;
     display: inline-flex;
     align-items: center;
@@ -141,6 +141,15 @@ main {
     border: none;
 }
 
-.add-watchlist:hover {
+.add-watchlist:hover , .remove-watchlist:hover {
     cursor: pointer;
+}
+
+.add-watchlist:active , .remove-watchlist:active {
+    transform: scale(0.98);
+}
+
+.add-movies {
+    text-decoration: none;
+    color: #9a9999;
 }
