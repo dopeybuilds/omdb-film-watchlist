@@ -57,6 +57,7 @@ body {
     color: white;
     background-color: #2E2E2F;
     border-radius: 0 .5rem .5rem 0;
+    cursor: pointer;
 }
 
 .search-form {
@@ -145,8 +146,13 @@ main {
     cursor: pointer;
 }
 
-.add-watchlist:active , .remove-watchlist:active {
+.add-watchlist:active , .remove-watchlist:active, .search-button:active {
     transform: scale(0.98);
+}
+
+.add-watchlist:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .add-movies {

@@ -1,6 +1,7 @@
 const apiKey = "784ea01"
 const results = document.getElementById("results")
 let currentMovies = []
+const addMovie = document.getElementById("add-watchlist")
 
 renderPlaceholder()
 results.addEventListener("click", (e) => {
@@ -8,13 +9,15 @@ results.addEventListener("click", (e) => {
     if (button == null) {
         
     } else {
-    const id = button.dataset.id
+        const id = button.dataset.id
         const movie = currentMovies.find((movie) => movie.imdbID === id)
         let watchlist = getWatchlist()
         if (watchlist.some((saved) => movie.imdbID === saved.imdbID)) {} 
         else {
             watchlist.push(movie)
             saveWatchlist(watchlist)
+            button.disabled = true
+            button.innerText = "Added"
         }
     }
 })
